@@ -84,6 +84,10 @@ converted_string = string_converter(test_string)
 
 files = file_finder(converted_string)
 
-print(files)
-
 wav_create(converted_string, files, "test.wav")
+
+while True:
+    com = input("")
+    converted_string = string_converter(com)
+    files = file_finder(converted_string)
+    wav_create(converted_string, files, f"{com[:8]}.wav")
